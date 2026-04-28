@@ -7,6 +7,7 @@ Multi-repo workspace for [OVN-Kubernetes](https://github.com/ovn-org/ovn-kuberne
 ```bash
 git clone https://github.com/dfarrell07/ovnk-workspace.git ~/ovnk
 cd ~/ovnk
+git config core.hooksPath .githooks
 make clone-all
 ```
 
