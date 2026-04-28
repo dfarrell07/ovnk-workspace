@@ -1,0 +1,51 @@
+# OVN-Kubernetes workspace repos
+# Format: dirname  url  [path-override]
+# path-override is for repos cloned outside ~/ovnk/
+
+# Core
+ovn-kubernetes                   https://github.com/ovn-org/ovn-kubernetes.git
+ovn-kubernetes-ds                https://github.com/openshift/ovn-kubernetes.git
+cluster-network-operator         https://github.com/openshift/cluster-network-operator.git
+cloud-network-config-controller  https://github.com/openshift/cloud-network-config-controller.git
+multus-cni                       https://github.com/openshift/multus-cni.git
+network-tools                    https://github.com/openshift/network-tools.git
+openshift-api                    https://github.com/openshift/api.git
+
+# Networking Stack
+ovn                              https://github.com/ovn-org/ovn.git
+ovs                              https://github.com/openvswitch/ovs.git
+libovsdb                         https://github.com/ovn-kubernetes/libovsdb.git
+frr-k8s                          https://github.com/metallb/frr-k8s.git
+network-policy-api               https://github.com/kubernetes-sigs/network-policy-api.git
+
+# CI and Testing
+ci-tools                         https://github.com/openshift/ci-tools.git
+ci-docs                          https://github.com/openshift/ci-docs.git
+ci-test-mapping                  https://github.com/openshift-eng/ci-test-mapping.git
+sippy                            https://github.com/openshift/sippy.git
+openshift-ci-mcp                 https://github.com/openshift-eng/openshift-ci-mcp.git
+gangway-cli                      https://github.com/openshift-eng/gangway-cli.git
+origin                           https://github.com/openshift/origin.git
+openshift-tests-extension        https://github.com/openshift-eng/openshift-tests-extension.git
+kubernetes-traffic-flow-tests    https://github.com/ovn-kubernetes/kubernetes-traffic-flow-tests.git
+ovn-fake-multinode               https://github.com/ovn-org/ovn-fake-multinode.git
+ovn-heater                       https://github.com/ovn-org/ovn-heater.git
+rebasebot                        https://github.com/openshift-eng/rebasebot.git
+openshift-release                https://github.com/openshift/release.git
+
+# Docs and Design
+openshift-docs                   https://github.com/openshift/openshift-docs.git
+enhancements                     https://github.com/openshift/enhancements.git
+kubernetes-enhancements          https://github.com/kubernetes/enhancements.git
+ovn-website                      https://github.com/ovn-org/ovn-website.git
+runbooks                         https://github.com/openshift/runbooks.git
+
+# AI and Automation
+ovn-kubernetes-mcp               https://github.com/ovn-kubernetes/ovn-kubernetes-mcp.git
+ai-helpers                       https://github.com/openshift-eng/ai-helpers.git
+kubernetes-mcp-server            https://github.com/containers/kubernetes-mcp-server.git
+ocp-performance-analyzer-mcp     https://github.com/openshift-eng/ocp-performance-analyzer-mcp.git
+kube-agentic-networking          https://github.com/kubernetes-sigs/kube-agentic-networking.git
+
+# Release
+ocp-build-data                   https://github.com/openshift-eng/ocp-build-data.git
