@@ -12,13 +12,13 @@ source "$(dirname "$0")/lib.sh"
 gitignore="${WORKSPACE_DIR}/.gitignore"
 {
     echo "# Auto-generated from repos.txt — run 'make sync' to regenerate"
-    echo "# Cloned sub-repos (tracked independently)"
-    while read -r dirname _ path; do
-        # Only ignore repos inside the workspace dir
+    echo "# Org directories containing cloned sub-repos (tracked independently)"
+    while read -r _ _ path; do
         if [[ "$path" == "${WORKSPACE_DIR}/"* ]]; then
-            echo "${dirname}/"
+            local_rel="${path#"${WORKSPACE_DIR}"/}"
+            echo "${local_rel%%/*}/"
         fi
-    done < <(read_repos)
+    done < <(read_repos) | sort -u
 } > "$gitignore"
 
 echo ""

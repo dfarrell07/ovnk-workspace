@@ -8,12 +8,13 @@ source "$(dirname "$0")/lib.sh"
 cloned=0
 existing=0
 
-while read -r dirname url path; do
+while read -r name url path; do
     if [[ -d "${path}/.git" ]]; then
         existing=$((existing + 1))
         continue
     fi
-    echo "Cloning ${dirname} -> ${path}"
+    echo "Cloning ${name} -> ${path}"
+    mkdir -p "$(dirname "$path")"
     git clone "$url" "$path"
     cloned=$((cloned + 1))
 done < <(read_repos)

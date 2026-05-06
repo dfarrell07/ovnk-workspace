@@ -4,18 +4,19 @@
 WORKSPACE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 REPOS_FILE="${WORKSPACE_DIR}/repos.txt"
 
-# Read repos.txt, yielding: dirname url path
-# Path defaults to ${WORKSPACE_DIR}/${dirname} unless overridden.
+# Read repos.txt, yielding: org/repo url path
+# Org and repo are derived from the URL (https://github.com/ORG/REPO.git).
+# An optional second column overrides the repo directory name only.
 read_repos() {
     while IFS= read -r line; do
         [[ -z "$line" || "$line" == \#* ]] && continue
-        local dirname url path
-        dirname="$(echo "$line" | awk '{print $1}')"
-        url="$(echo "$line" | awk '{print $2}')"
-        path="$(echo "$line" | awk '{print $3}')"
-        path="${path:-${WORKSPACE_DIR}/${dirname}}"
-        # Expand ~ to HOME
-        path="${path/#\~/$HOME}"
-        echo "${dirname} ${url} ${path}"
+        local url override org repo name path
+        url="$(echo "$line" | awk '{print $1}')"
+        override="$(echo "$line" | awk '{print $2}')"
+        org="$(echo "$url" | sed 's|.*/\([^/]*\)/[^/]*$|\1|')"
+        repo="$(echo "$url" | sed 's|.*/||; s|\.git$||')"
+        name="${override:-${repo}}"
+        path="${WORKSPACE_DIR}/${org}/${name}"
+        echo "${org}/${name} ${url} ${path}"
     done < "$REPOS_FILE"
 }

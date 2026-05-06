@@ -7,15 +7,15 @@ source "$(dirname "$0")/lib.sh"
 
 failed=0
 
-while read -r dirname _ path; do
+while read -r name _ path; do
     if [[ ! -d "${path}/.git" ]]; then
-        echo "SKIP  ${dirname} (not cloned at ${path})"
+        echo "SKIP  ${name} (not cloned at ${path})"
         continue
     fi
     if output="$(git -C "$path" fetch --all --prune 2>&1)"; then
-        echo "OK    ${dirname}"
+        echo "OK    ${name}"
     else
-        echo "FAIL  ${dirname}"
+        echo "FAIL  ${name}"
         echo "$output" | sed 's/^/      /'
         failed=$((failed + 1))
     fi

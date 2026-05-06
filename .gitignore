@@ -1,38 +1,11 @@
 # Auto-generated from repos.txt — run 'make sync' to regenerate
-# Cloned sub-repos (tracked independently)
+# Org directories containing cloned sub-repos (tracked independently)
+containers/
+kubernetes/
+kubernetes-sigs/
+metallb/
+openshift/
+openshift-eng/
+openvswitch/
 ovn-kubernetes/
-ovn-kubernetes-ds/
-cluster-network-operator/
-cloud-network-config-controller/
-multus-cni/
-network-tools/
-openshift-api/
-ovn/
-ovs/
-libovsdb/
-frr-k8s/
-network-policy-api/
-ci-tools/
-ci-docs/
-ci-test-mapping/
-sippy/
-openshift-ci-mcp/
-gangway-cli/
-origin/
-openshift-tests-extension/
-kubernetes-traffic-flow-tests/
-ovn-fake-multinode/
-ovn-heater/
-rebasebot/
-openshift-release/
-openshift-docs/
-enhancements/
-kubernetes-enhancements/
-ovn-website/
-runbooks/
-ovn-kubernetes-mcp/
-ai-helpers/
-kubernetes-mcp-server/
-ocp-performance-analyzer-mcp/
-kube-agentic-networking/
-ocp-build-data/
+ovn-org/

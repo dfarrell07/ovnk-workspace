@@ -24,7 +24,8 @@ make lint        # run linters
 
 ## Adding or removing repos
 
-Edit `repos.txt` (one line per repo: `dirname url [path-override]`), then run `make sync`.
+Edit `repos.txt` (one URL per line, optionally followed by a local name override),
+then run `make sync`.
 
 ## Agent context
 
