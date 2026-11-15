@@ -35,32 +35,32 @@ to CLAUDE.md.
 <!-- markdownlint-disable MD013 -->
 
 | Path | Description | Category |
-|------|-------------|----------|
+| --- | --- | --- |
 | containers/kubernetes-mcp-server | General K8s/OpenShift MCP server (1.5k stars) | AI |
 
 ### kubernetes (1 repo)
 
 | Path | Description | Category |
-|------|-------------|----------|
+| --- | --- | --- |
 | kubernetes/enhancements | Upstream Kubernetes KEPs | Docs |
 
 ### kubernetes-sigs (2 repos)
 
 | Path | Description | Category |
-|------|-------------|----------|
+| --- | --- | --- |
 | kubernetes-sigs/kube-agentic-networking | Network APIs for AI agent communication | AI |
 | kubernetes-sigs/network-policy-api | NetworkPolicy v2 API (AdminNetworkPolicy) | Networking |
 
 ### metallb (1 repo)
 
 | Path | Description | Category |
-|------|-------------|----------|
+| --- | --- | --- |
 | metallb/frr-k8s | FRR routing for BGP/EVPN integration | Networking |
 
 ### openshift (14 repos)
 
 | Path | Description | Category |
-|------|-------------|----------|
+| --- | --- | --- |
 | openshift/api | OpenShift API types and feature gates | Core |
 | openshift/ci-docs | OpenShift CI system documentation | CI |
 | openshift/ci-tools | ci-operator engine and tooling | CI |
@@ -79,7 +79,7 @@ to CLAUDE.md.
 ### openshift-eng (8 repos)
 
 | Path | Description | Category |
-|------|-------------|----------|
+| --- | --- | --- |
 | openshift-eng/ai-helpers | Claude Code plugin marketplace (35+ plugins) | AI |
 | openshift-eng/ci-test-mapping | Maps tests to components for readiness tracking | CI |
 | openshift-eng/gangway-cli | CLI for triggering Prow jobs via API | CI |
@@ -92,13 +92,13 @@ to CLAUDE.md.
 ### openvswitch (1 repo)
 
 | Path | Description | Category |
-|------|-------------|----------|
+| --- | --- | --- |
 | openvswitch/ovs | Open vSwitch datapath (C) | Networking |
 
 ### ovn-kubernetes (3 repos)
 
 | Path | Description | Category |
-|------|-------------|----------|
+| --- | --- | --- |
 | ovn-kubernetes/kubernetes-traffic-flow-tests | Network connectivity test suite (Python) | CI |
 | ovn-kubernetes/libovsdb | Go OVSDB client library (236 files import it) | Networking |
 | ovn-kubernetes/ovn-kubernetes-mcp | MCP server for ovnk troubleshooting (OKEP-5494) | AI |
@@ -106,7 +106,7 @@ to CLAUDE.md.
 ### ovn-org (5 repos)
 
 | Path | Description | Category |
-|------|-------------|----------|
+| --- | --- | --- |
 | ovn-org/ovn | OVN virtual network control plane (C) | Networking |
 | ovn-org/ovn-fake-multinode | Simulated multi-chassis OVN for testing | CI |
 | ovn-org/ovn-heater | OVN scale/performance test framework | CI |
@@ -133,7 +133,8 @@ openshift-eng/rebasebot: ovn-org/ovn-kubernetes -> openshift/ovn-kubernetes
 
 openshift/release -> downstream CI (ci-operator configs define Prow jobs)
 
-openshift-eng/ocp-build-data -> downstream images (ART configs define OCP release builds)
+openshift-eng/ocp-build-data -> downstream images
+(ART configs define OCP release builds)
 
 ## CI Systems
 
