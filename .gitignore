@@ -1,11 +1,11 @@
 # Auto-generated from repos.txt — run 'make sync' to regenerate
 # Org directories containing cloned sub-repos (tracked independently)
 containers/
-kubernetes/
 kubernetes-sigs/
+kubernetes/
 metallb/
-openshift/
 openshift-eng/
+openshift/
 openvswitch/
 ovn-kubernetes/
 ovn-org/

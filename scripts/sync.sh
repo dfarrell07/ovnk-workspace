@@ -8,7 +8,7 @@ source "$(dirname "$0")/lib.sh"
 # Clone missing repos
 "${WORKSPACE_DIR}/scripts/clone-all.sh"
 
-# Regenerate .gitignore
+# Regenerate .gitignore, sorted by byte so the file is the same under any locale or OS
 gitignore="${WORKSPACE_DIR}/.gitignore"
 {
     echo "# Auto-generated from repos.txt — run 'make sync' to regenerate"
@@ -18,7 +18,7 @@ gitignore="${WORKSPACE_DIR}/.gitignore"
             local_rel="${path#"${WORKSPACE_DIR}"/}"
             echo "${local_rel%%/*}/"
         fi
-    done < <(read_repos) | sort -u
+    done < <(read_repos) | LC_ALL=C sort -u
 } > "$gitignore"
 
 echo ""
